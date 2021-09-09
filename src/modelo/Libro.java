@@ -1,6 +1,6 @@
 package modelo;
 
-public class Libro implements Accesible{
+public class Libro implements Accesible,Comparable<Libro>{
 	private String isbn;
 	private String titulo;
 	private String autor;
@@ -52,6 +52,11 @@ public class Libro implements Accesible{
 	public String toString() {
 		return "Libro [isbn=" + isbn + ", titulo=" + titulo + ", autor=" + autor + ", editorial=" + editorial
 				+ ", edicion=" + edicion + ", idioma=" + idioma + "]";
+	}
+	@Override
+	public int compareTo(Libro libro) {
+		// TODO Auto-generated method stub
+		return this.titulo.compareTo(libro.titulo);
 	}
 	
 	
